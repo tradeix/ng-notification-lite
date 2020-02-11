@@ -15,6 +15,7 @@ repositories {
 	mavenCentral()
 }
 
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
@@ -24,6 +25,11 @@ dependencies {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 	testImplementation("org.springframework.kafka:spring-kafka-test")
+	implementation("io.github.microutils:kotlin-logging:1.7.6")
+	implementation("com.squareup.okhttp3:okhttp:3.2.0")
+	implementation("com.fasterxml.jackson.core:jackson-core")
+	implementation("com.fasterxml.jackson.core:jackson-databind")
+	implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.4")
 }
 
 tasks.withType<Test> {
